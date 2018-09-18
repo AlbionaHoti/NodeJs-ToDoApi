@@ -41,7 +41,7 @@ describe('Post /todos', () => {
     .expect(400)
     .end((err, res) => {
       if (err) {
-        return done(err);
+        return done(err) ;
       }
 
       Todo.find().then((todos) => {
