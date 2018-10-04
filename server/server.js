@@ -4,14 +4,14 @@ var bodyParser = require('body-parser');
 
 
 var {mongoose} = require('./db/mongoose')
-const token = '51268972756471808318';
-const authorize = (req, res, next) => {
-  if (req.headers.authorize == token){
-    next();
-  } else {
-    res.status(401);
-  }
-}
+// const token = '51268972756471808318';
+// const authorize = (req, res, next) => {
+//   if (req.headers.authorize == token){
+//     next();
+//   } else {
+//     res.status(401);
+//   }
+// }
 var {Todo} = require('./models/todo');
 var {User} = require('./models/user');
 
@@ -34,7 +34,7 @@ app.post('/todos', (req, res) => {
   });
 });
 
-app.get('/todos', authorize, (req, res) => {
+app.get('/todos', (req, res) => {
   Todo.find().then((todos) => {
     res.send({todos});
   }, (e) => {
