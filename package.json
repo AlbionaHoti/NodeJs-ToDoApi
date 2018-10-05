@@ -9,7 +9,7 @@
     "test-watch": "nodemon --exec 'npm test'"
   },
   "engines": {
-    "node": "10.6.0"  
+    "node": "10.6.0"
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +17,8 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "mongodb": "^2.2.5",
-    "mongoose": "^5.2.15"
+    "mongoose": "^5.2.15",
+    "n": "^2.1.12"
   },
   "devDependencies": {
     "expect": "^1.20.2",
