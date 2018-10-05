@@ -60,20 +60,11 @@ app.get('/todos/:id', (req, res) => {
 });
 
 app.delete('/todos/:id', (req, res) => {
-  // get the id
   var id = req.params.id; // in params ->  is the place where all url parameters are restored
   
-  // validate the id => not valid? return 404
   if (!ObjectID.isValid(id)) {
     res.status(404).send();
   }
-  
-  // remove todo by id
-    // success
-      // if no doc, send 404
-      // if doc, send dock back 200
-    // error
-      // 400 with empty body
 
   Todo.findByIdAndRemove(id).then((todo) => {
     if(!todo) {
